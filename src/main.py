@@ -2,13 +2,13 @@ import streamlit as st
 import pandas as pd
 import os
 from pathlib import Path
-import TicketmasteAPI
+import location_data
 
 class GUI:
 
     def __init__(self):
         os.makedirs("data", exist_ok=True)
-        self.api = TicketmasteAPI.LocationData()
+        self.api = location_data.LocationData()
 
         try:
             self.file_path = Path("data/concerts-attended.csv")
