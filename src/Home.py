@@ -6,9 +6,17 @@ class GUI:
     def __init__(self):
 
         st.set_page_config(page_title="Concert Tracker", layout="wide")
-        st.navigation(["Home.py", "Events.py", "Statistics.py"])
+        st.navigation(["Events.py", "Statistics.py"])
 
-        st.write("I will input tutorial stuff here :)")
+        pages = {
+            "Event History": [
+                st.Page("Events.py", title="Events"),
+                st.Page("Statistics.py", title="Statistics"),
+            ],
+        }
+
+        pg = st.navigation(pages)
+        pg.run()
 
 if __name__ == "__main__":
 

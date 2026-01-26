@@ -6,9 +6,9 @@ class StatsPage:
 
     def __init__(self):
 
+        st.title("Statistics")
         self.dm = DataManager()
         self.df = self.dm.event_df
-        st.title("Statistics")
 
         if len(self.df) > 0:
             self.generate_summary()
@@ -82,4 +82,4 @@ class StatsPage:
         return map_df
 
 if __name__ == "__main__":
-    page = StatsPage()
+    StatsPage()

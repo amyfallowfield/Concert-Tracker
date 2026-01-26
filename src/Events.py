@@ -6,8 +6,8 @@ class EventsPage:
 
     def __init__(self):
 
-        self.df = DataManager().event_df
         st.title("Events")
+        self.df = DataManager().event_df
 
         self.generate_add_event()
         self.generate_view_events()
@@ -63,4 +63,4 @@ class EventsPage:
         self.location.update_locations(venue_city)
 
 if __name__ == "__main__":
-    page = EventsPage()
+    EventsPage()
